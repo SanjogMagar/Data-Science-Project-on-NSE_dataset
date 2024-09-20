@@ -1,0 +1,91 @@
+#for install nselib
+!pip install nselib
+
+#update nselib
+!pip install nselib --upgrade
+
+import nselib
+from nselib import capital_market
+
+#show latest date here 
+capital_market.bhav_copy_equities('20-08-2024')
+
+
+capital_market.bhav_copy_with_delivery('20-08-2024')
+
+capital_market.block_deals_data(period='1M')
+
+capital_market.equity_list()
+
+
+capital_market.short_selling_data(period='1M')
+
+from nselib import derivatives 
+
+
+derivatives.expiry_dates_future()
+
+derivatives.expiry_dates_option_index()
+
+derivatives.future_price_volume_data(symbol='SBIN', instrument='FUTSTK', from_date='20-06-2023', to_date='20-07-2023')
+
+
+capital_market.bhav_copy_with_delivery(trade_date='20-08-2024')
+
+derivatives.participant_wise_open_interest(trade_date='20-08-2024')
+
+derivatives.participant_wise_open_interest(trade_date='20-08-2024')
+
+capital_market.deliverable_position_data('SBIN', period='1M')
+
+capital_market.price_volume_and_deliverable_position_data('SBIN', period='1M')
+
+capital_market.index_data('NIFTY BANK', period='1M')
+
+capital_market.india_vix_data(period='1M')
+
+capital_market.india_vix_data(period='1M')
+
+
+capital_market.market_watch_all_indices()
+
+capital_market.nifty50_equity_list()
+
+capital_market.week_52_high_low_report(trade_date='20-08-2024')
+
+capital_market.short_selling_data(period='1M')
+
+derivatives.fno_bhav_copy('20-08-2024')
+
+derivatives.participant_wise_trading_volume(trade_date='19-08-2024')
+
+derivatives.nse_live_option_chain('BANKNIFTY', expiry_date='30-08-2024')
+
+derivatives.future_price_volume_data(symbol='SBIN', instrument='FUTSTK', from_date='20-06-2023', to_date='20-07-2023')
+
+derivatives. option_price_volume_data('BANKNIFTY', 'OPTIDX', period='1M')
+
+derivatives.participant_wise_open_interest('20-08-2024')
+
+derivatives.participant_wise_trading_volume('20-08-2024')
+
+url='https://www.google.com/finance/quote/INFY:NSE'
+url='https://www.google.com/finance/quote/500209:BOM'
+
+import requests
+from bs4 import BeautifulSoup
+import time
+
+
+ticker='INFY'
+url= f'https://www.google.com/finance/quote/{ticker}:NSE'
+response=requests.get(url)
+soup=BeautifulSoup(response.text,'html.parser')
+
+soup
+
+class1="YMlKec"
+soup.find(class_=class1).text
+
+
+
